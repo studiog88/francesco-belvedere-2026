@@ -83,20 +83,6 @@ button:focus-visible {
   gap: var(--Scale-400);
 }
 
-.section-heading {
-  display: grid;
-  gap: var(--Scale-100);
-}
-
-.section-kicker {
-  margin: 0;
-  font-size: var(--Font-Body-Caption-text-size);
-  line-height: var(--Font-Body-Caption-line-height);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
-}
-
 h1,
 h2,
 h3,
