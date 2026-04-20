@@ -1,0 +1,4 @@
+#about {
+  padding-top: var(--Scale-300);
+  border-top: 1px solid var(--line-subtle);
+}

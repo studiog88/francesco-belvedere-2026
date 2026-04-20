@@ -1,0 +1,11 @@
+.hero {
+  min-height: clamp(24rem, 60vh, 38rem);
+  align-content: center;
+  padding-block: var(--Scale-700);
+}
+
+.hero__lede {
+  max-width: 48ch;
+  font-size: var(--Font-Body-Paragraph-L-text-size);
+  line-height: var(--Font-Body-Paragraph-L-line-height);
+}

@@ -1,0 +1,36 @@
+/* Responsive - Mode 1 */
+:root {
+  --Font-Headings-Display-text-size: 80px;
+  --Font-Headings-Display-line-height: 88px;
+  --Font-Headings-Display-paragraph-spacing: 120px;
+  --Font-Headings-H1-text-size: 60px;
+  --Font-Headings-H1-line-height: 72px;
+  --Font-Headings-H1-paragraph-spacing: 104px;
+  --Font-Headings-H2-text-size: 48px;
+  --Font-Headings-H2-line-height: 56px;
+  --Font-Headings-H2-paragraph-spacing: 80px;
+  --Font-Headings-H3-text-size: 40px;
+  --Font-Headings-H3-line-height: 48px;
+  --Font-Headings-H3-paragraph-spacing: 72px;
+  --Font-Headings-H4-text-size: 32px;
+  --Font-Headings-H4-line-height: 40px;
+  --Font-Headings-H4-paragraph-spacing: 64px;
+  --Font-Headings-H5-text-size: 24px;
+  --Font-Headings-H5-line-height: 28px;
+  --Font-Headings-H5-paragraph-spacing: 40px;
+  --Font-Headings-H6-text-size: 20px;
+  --Font-Headings-H6-line-height: 24px;
+  --Font-Headings-H6-paragraph-spacing: 32px;
+  --Font-Body-Paragraph-L-text-size: 20px;
+  --Font-Body-Paragraph-L-line-height: 24px;
+  --Font-Body-Paragraph-L-paragraph-spacing: 32px;
+  --Font-Body-Paragraph-text-size: 16px;
+  --Font-Body-Paragraph-line-height: 20px;
+  --Font-Body-Paragraph-paragraph-spacing: 28px;
+  --Font-Body-Paragraph-SM-text-size: 14px;
+  --Font-Body-Paragraph-SM-line-height: 16px;
+  --Font-Body-Paragraph-SM-paragraph-spacing: 24px;
+  --Font-Body-Caption-text-size: 12px;
+  --Font-Body-Caption-line-height: 16px;
+  --Font-Body-Caption-paragraph-spacing: 20px;
+}
