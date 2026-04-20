@@ -34,12 +34,12 @@
 
 .site-nav__side--left:hover,
 .site-nav__side--left:focus-within {
-  background-color: var(--Lime-500);
+  background-color: var(--accent);
 }
 
 .site-nav__side--right:hover,
 .site-nav__side--right:focus-within {
-  background-color: var(--Lime-500);
+  background-color: var(--accent);
 }
 
 .site-nav__link {
@@ -62,7 +62,7 @@
   width: auto;
   margin: 0;
   justify-self: center;
-  background-color: var(--Lime-500);
+  background-color: var(--accent);
   text-decoration: none;
   color: inherit;
 }

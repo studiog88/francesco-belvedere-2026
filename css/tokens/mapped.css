@@ -1,0 +1,5 @@
+/* Mapped tokens: primitives → UI roles. Override in alternate color modes. */
+:root {
+  --accent: var(--Lime-500);
+  --accent-hover: var(--Lime-700);
+}
