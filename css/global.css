@@ -6,7 +6,7 @@
   --container-max: 72rem;
   --container-gutter: var(--Scale-400);
   --section-gap: var(--Scale-1200);
-  --card-radius: var(--Scale-300);
+  --card-radius: var(--Scale-0);
   --focus-ring: var(--Scale-50);
   --duration-fast: 160ms;
   --easing-standard: ease;
@@ -18,8 +18,6 @@
   --text-muted: var(--Warm-Grey-600);
   --line-subtle: var(--Warm-Grey-200);
   --line-strong: var(--Warm-Grey-300);
-  --accent: var(--Lime-700);
-  --accent-hover: var(--Lime-800);
 }
 
 html {
