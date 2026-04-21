@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/tokens/responsive.css" />
     <link rel="stylesheet" href="css/tokens/mapped.css" />
     <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/sections/preloader.css" />
     <link rel="stylesheet" href="css/sections/nav.css" />
     <link rel="stylesheet" href="css/sections/hero.css" />
     <link rel="stylesheet" href="css/sections/work.css" />
@@ -23,6 +24,18 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div
+      id="site-preloader"
+      class="site-preloader"
+      aria-hidden="true"
+      role="presentation"
+    >
+      <div class="site-preloader__backdrop" aria-hidden="true"></div>
+      <div class="site-preloader__logo">
+        <img src="assets/images/logomark.svg" alt="" width="40" height="72" />
+      </div>
+    </div>
 
     <header class="site-header">
       <nav class="site-nav site-nav--primary-v2" aria-label="Primary">
@@ -40,11 +53,16 @@
 
     <main id="main-content">
       <section id="hero" class="section hero" aria-labelledby="hero-title">
-        <h1 id="hero-title">Designing simple digital experiences with clear intent.</h1>
-        <p class="hero__lede">
-          Early-stage portfolio build focused on craft, structure, and visual clarity.
-        </p>
-        <a class="button" href="#work">View selected work</a>
+        <h1
+          id="hero-title"
+          class="hero__title"
+          aria-label="Francesco Belvedere"
+        >
+          <span data-hero-weight-ramp class="hero__lines" aria-hidden="true">
+            <span class="hero__line hero__line--first">Francesco</span>
+            <span class="hero__line hero__line--second">Belvedere</span>
+          </span>
+        </h1>
       </section>
 
       <section id="work" class="section" aria-labelledby="work-title">

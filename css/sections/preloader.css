@@ -1,0 +1,98 @@
+/* Full-viewport intro: logo + foundation white, then exit to main layout */
+
+:root {
+  --preloader-exit-duration: 1s;
+  --preloader-exit-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --preloader-blink-ease: ease-in-out;
+}
+
+.site-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: auto;
+}
+
+.site-preloader__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: var(--Foundation-White);
+  opacity: 1;
+  transition: opacity var(--preloader-exit-duration) var(--preloader-exit-ease);
+}
+
+.site-preloader__logo {
+  position: absolute;
+  top: var(--Scale-800);
+  left: var(--Scale-800);
+  display: grid;
+  place-items: center;
+  width: var(--Scale-1500);
+  height: var(--Scale-1500);
+  margin: 0;
+  background-color: var(--accent);
+  transform-origin: center center;
+  animation: site-preloader-blink 1s var(--preloader-blink-ease) infinite;
+  transition:
+    transform var(--preloader-exit-duration) var(--preloader-exit-ease),
+    opacity var(--preloader-exit-duration) var(--preloader-exit-ease);
+}
+
+.site-preloader__logo img {
+  display: block;
+  width: auto;
+  height: 58%;
+  max-width: 62%;
+  object-fit: contain;
+  transform: translate(var(--Scale-100), calc(var(--Scale-100) * -1));
+}
+
+@keyframes site-preloader-blink {
+  0%,
+  38% {
+    opacity: 1;
+  }
+
+  50%,
+  88% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.site-preloader--exiting .site-preloader__backdrop {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-preloader--exiting .site-preloader__logo {
+  animation: none;
+  opacity: 0;
+  transform: translate(
+    calc(100vw - var(--Scale-800) - var(--Scale-800) - 100%),
+    calc(var(--Scale-800) * -1)
+  );
+}
+
+html.is-preloading {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-preloader__backdrop {
+    transition-duration: 1ms;
+  }
+
+  .site-preloader__logo {
+    animation: none;
+    transition-duration: 1ms;
+  }
+
+  .site-preloader--exiting .site-preloader__logo {
+    transform: none;
+    opacity: 0;
+  }
+}

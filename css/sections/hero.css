@@ -1,11 +1,85 @@
 .hero {
-  min-height: clamp(24rem, 60vh, 38rem);
-  align-content: center;
-  padding-block: var(--Scale-700);
+  --hero-pull: calc(var(--site-header-stack) + var(--Scale-900));
+  --hero-skew: -8deg;
+  position: relative;
+  z-index: 0;
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  /* vw can exceed the layout viewport when scrollbars exist; dvw tracks the paint viewport better. */
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100dvw;
+  max-width: 100dvw;
+  margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50dvw);
+  margin-top: calc(var(--hero-pull) * -1);
+  padding: var(--hero-pull) 0 0;
+  box-sizing: border-box;
+  overflow-x: visible;
 }
 
-.hero__lede {
-  max-width: 48ch;
-  font-size: var(--Font-Body-Paragraph-L-text-size);
-  line-height: var(--Font-Body-Paragraph-L-line-height);
+.hero h1.hero__title {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: none;
+  /* ~20% smaller than prior triple-size clamp */
+  font-size: clamp(6rem, 32.4vw, 25.2rem);
+  font-family: "Work Sans", "Inter", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: -0.09em;
+  line-height: 1;
+}
+
+/* Gradient + clip live on the same element as transforms (avoids invisible text when
+   a transformed subtree sits under an ancestor with background-clip: text). */
+.hero__lines {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  width: max-content;
+  background-image: linear-gradient(
+    105deg,
+    var(--Blue-100) 0%,
+    var(--Blue-200) 22%,
+    var(--Lime-100) 56%,
+    var(--Lime-200) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transform: skewX(var(--hero-skew)) scaleX(var(--hero-fit, 1));
+  transform-origin: left center;
+  isolation: isolate;
+}
+
+.hero__line {
+  display: block;
+  font-size: inherit;
+  /* Tight display lines (was looser with line-height: 1 + flex gap) */
+  line-height: 0.78;
+  white-space: nowrap;
+}
+
+.hero__line--second {
+  /* Pull second line up so caps almost meet; skew makes gaps read larger */
+  margin-top: -0.1em;
+}
+
+.hero__char {
+  font-variation-settings: "wght" var(--hero-wght, 900);
+  font-weight: 900;
+}
+
+/* No-JS: full weight until characters are injected */
+.hero__lines:not(:has(.hero__char)) .hero__line {
+  font-variation-settings: "wght" 900;
+  font-weight: 900;
 }
